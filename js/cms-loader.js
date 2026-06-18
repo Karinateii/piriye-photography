@@ -32,8 +32,10 @@ async function loadGallery() {
   grid.innerHTML = data.photos.map((photo, i) => {
     const delay = ((i % 3) * 0.08).toFixed(2);
     const cat   = photo.category || 'portrait';
+    // No `reveal` class — items are injected after the IntersectionObserver
+    // is already set up, so they would never become visible. Show directly.
     return `
-      <div class="gallery-item reveal" data-category="${cat}" data-delay="${delay}">
+      <div class="gallery-item" data-category="${cat}" data-delay="${delay}">
         <img src="${photo.image}" alt="${photo.alt || photo.caption || ''}">
         <div class="gallery-overlay">
           <span class="overlay-category">${labels[cat] || cat}</span>
