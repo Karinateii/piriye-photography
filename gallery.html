@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Piriye Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="base.css?v=4">
+    <link rel="stylesheet" href="gallery.css?v=4">
+</head>
+<body>
+
+    <!-- Premium experience elements -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-logo">
+            <span class="loader-name">Piriye</span>
+            <span class="loader-tagline">Photography</span>
+        </div>
+        <div class="loader-line"><div class="loader-line-fill"></div></div>
+    </div>
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-ring" class="cursor-ring"></div>
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Navbar: always dark on inner pages -->
+    <nav class="navbar dark" id="navbar">
+        <ul class="sidebar">
+            <li><a href="#" id="close-sidebar"><svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="investment.html">Packages</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <ul>
+            <li>
+                <a href="index.html" class="nav-logo">
+                    <span class="logo-name">Piriye</span>
+                    <span class="logo-sub">Photography</span>
+                </a>
+            </li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="gallery.html" class="active-link">Gallery</a></li>
+            <li class="hideOnMobile"><a href="investment.html">Packages</a></li>
+            <li class="hideOnMobile"><a href="index.html#contact">Contact</a></li>
+            <li class="menu-button">
+                <a href="#" id="toggle-sidebar"><svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="gallery-hero">
+        <span class="section-label">Portfolio</span>
+        <h1>Gallery</h1>
+        <p>A visual journey through the lens</p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+
+        <div class="gallery-filters reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="portrait">Portraits</button>
+            <button class="filter-btn" data-filter="wedding">Weddings</button>
+            <button class="filter-btn" data-filter="engagement">Engagement</button>
+            <button class="filter-btn" data-filter="event">Events</button>
+            <button class="filter-btn" data-filter="content">Content</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+
+            <div class="gallery-item reveal" data-category="portrait" data-delay="0">
+                <img src="media/Piriye Shot.png" alt="Portrait Session">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Portrait</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="wedding" data-delay="0.08">
+                <img src="media/Piriye Shot.png" alt="Wedding">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Wedding</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="engagement" data-delay="0.16">
+                <img src="media/Piriye Shot.png" alt="Engagement">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Engagement</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="event" data-delay="0">
+                <img src="media/Piriye Shot.png" alt="Event Coverage">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Events</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="content" data-delay="0.08">
+                <img src="media/Piriye Shot.png" alt="Content Creation">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Content</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="portrait" data-delay="0.16">
+                <img src="media/Piriye Shot.png" alt="Portrait">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Portrait</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="wedding" data-delay="0">
+                <img src="media/Piriye Shot.png" alt="Wedding">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Wedding</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="portrait" data-delay="0.08">
+                <img src="media/Piriye Shot.png" alt="Portrait">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Portrait</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="engagement" data-delay="0.16">
+                <img src="media/Piriye Shot.png" alt="Engagement">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Engagement</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="content" data-delay="0">
+                <img src="media/Piriye Shot.png" alt="Content">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Content</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="event" data-delay="0.08">
+                <img src="media/Piriye Shot.png" alt="Event">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Events</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="wedding" data-delay="0.16">
+                <img src="media/Piriye Shot.png" alt="Wedding">
+                <div class="gallery-overlay">
+                    <span class="overlay-category">Wedding</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <div class="social-media">
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 Piriye Photography. All rights reserved.</p>
+    </div>
+
+    <a href="#" class="back-to-top" id="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav" id="lightbox-prev">&#8249;</button>
+        <img src="" alt="" id="lightbox-img">
+        <button class="lightbox-nav" id="lightbox-next">&#8250;</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+    <script src="experience.js?v=2"></script>
+    <script>
+        document.getElementById('toggle-sidebar').addEventListener('click', () => {
+            document.querySelector('.sidebar').style.display = 'flex';
+        });
+        document.getElementById('close-sidebar').addEventListener('click', () => {
+            document.querySelector('.sidebar').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
