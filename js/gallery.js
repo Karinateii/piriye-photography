@@ -80,22 +80,23 @@ filterBtns.forEach(btn => {
     const exitDuration = Math.min(visible.length * 18 + 160, 380);
     clearTimeout(filterTimeout);
     filterTimeout = setTimeout(() => {
-      let enterIndex = 0;
+      let enterIdx = 0;
       galleryItems.forEach(item => {
-        item.classList.remove('filter-exit');
         item.style.transitionDelay = '';
         const show = filter === 'all' || item.dataset.category === filter;
-        if (show) {
-          item.classList.remove('hidden');
-          const delay = enterIndex++ * 55;
-          setTimeout(() => {
-            item.classList.add('filter-enter');
-            setTimeout(() => item.classList.remove('filter-enter'), 500);
-          }, delay);
-        } else {
+        if (!show) {
           item.classList.add('hidden');
+        } else {
+          item.classList.remove('hidden');
+          item.style.transitionDelay = `${enterIdx++ * 55}ms`;
         }
+        item.classList.remove('filter-exit');
       });
+      // Clear stagger delays once all enter transitions have finished
+      const cleanup = Math.max(enterIdx - 1, 0) * 55 + 420;
+      setTimeout(() => {
+        galleryItems.forEach(i => { i.style.transitionDelay = ''; });
+      }, cleanup);
     }, exitDuration);
   });
 });
