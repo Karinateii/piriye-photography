@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="base.css?v=4">
-    <link rel="stylesheet" href="gallery.css?v=4">
+    <link rel="stylesheet" href="base.css?v=5">
+    <link rel="stylesheet" href="gallery.css?v=5">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
     <div id="cursor-ring" class="cursor-ring"></div>
     <div id="scroll-progress" class="scroll-progress"></div>
 
-    <!-- Navbar: always dark on inner pages -->
+    <!-- Navbar -->
     <nav class="navbar dark" id="navbar">
         <ul class="sidebar">
             <li><a href="#" id="close-sidebar"><svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
@@ -71,87 +71,103 @@
 
         <div class="gallery-grid" id="gallery-grid">
 
-            <div class="gallery-item reveal" data-category="portrait" data-delay="0">
+            <!-- Row 1: portrait | landscape | portrait -->
+            <div class="gallery-item reveal" data-category="portrait" data-size="portrait" data-delay="0">
                 <img src="media/Piriye Shot.png" alt="Portrait Session">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Portrait</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="wedding" data-delay="0.08">
+            <div class="gallery-item reveal" data-category="wedding" data-size="landscape" data-delay="0.08">
                 <img src="media/Piriye Shot.png" alt="Wedding">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Wedding</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="engagement" data-delay="0.16">
+            <div class="gallery-item reveal" data-category="engagement" data-size="portrait" data-delay="0.16">
                 <img src="media/Piriye Shot.png" alt="Engagement">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Engagement</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="event" data-delay="0">
+            <!-- Row 2: landscape | portrait | landscape -->
+            <div class="gallery-item reveal" data-category="event" data-size="landscape" data-delay="0">
                 <img src="media/Piriye Shot.png" alt="Event Coverage">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Events</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="content" data-delay="0.08">
+            <div class="gallery-item reveal" data-category="content" data-size="portrait" data-delay="0.08">
                 <img src="media/Piriye Shot.png" alt="Content Creation">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Content</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="portrait" data-delay="0.16">
+            <div class="gallery-item reveal" data-category="portrait" data-size="landscape" data-delay="0.16">
                 <img src="media/Piriye Shot.png" alt="Portrait">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Portrait</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="wedding" data-delay="0">
+            <!-- Row 3: portrait | landscape | portrait -->
+            <div class="gallery-item reveal" data-category="wedding" data-size="portrait" data-delay="0">
                 <img src="media/Piriye Shot.png" alt="Wedding">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Wedding</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="portrait" data-delay="0.08">
+            <div class="gallery-item reveal" data-category="portrait" data-size="landscape" data-delay="0.08">
                 <img src="media/Piriye Shot.png" alt="Portrait">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Portrait</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="engagement" data-delay="0.16">
+            <div class="gallery-item reveal" data-category="engagement" data-size="portrait" data-delay="0.16">
                 <img src="media/Piriye Shot.png" alt="Engagement">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Engagement</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="content" data-delay="0">
+            <!-- Row 4: landscape | portrait | landscape -->
+            <div class="gallery-item reveal" data-category="content" data-size="landscape" data-delay="0">
                 <img src="media/Piriye Shot.png" alt="Content">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Content</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="event" data-delay="0.08">
+            <div class="gallery-item reveal" data-category="event" data-size="portrait" data-delay="0.08">
                 <img src="media/Piriye Shot.png" alt="Event">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Events</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
-            <div class="gallery-item reveal" data-category="wedding" data-delay="0.16">
+            <div class="gallery-item reveal" data-category="wedding" data-size="landscape" data-delay="0.16">
                 <img src="media/Piriye Shot.png" alt="Wedding">
                 <div class="gallery-overlay">
                     <span class="overlay-category">Wedding</span>
+                    <span class="overlay-view">View image</span>
                 </div>
             </div>
 
@@ -178,6 +194,7 @@
         <button class="lightbox-nav" id="lightbox-prev">&#8249;</button>
         <img src="" alt="" id="lightbox-img">
         <button class="lightbox-nav" id="lightbox-next">&#8250;</button>
+        <span class="lightbox-counter" id="lightbox-counter"></span>
     </div>
 
     <script src="script.js"></script>
