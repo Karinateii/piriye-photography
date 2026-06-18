@@ -56,8 +56,10 @@ async function loadTestimonials() {
   const data = await fetchJSON('testimonials.json');
   if (!data?.testimonials?.length) return;
 
+  // No `reveal` class — injected after the IntersectionObserver is set up,
+  // so they would never become visible. Show directly.
   grid.innerHTML = data.testimonials.map((t, i) => `
-    <blockquote class="testimonial-card reveal" data-delay="${(i * 0.12).toFixed(2)}">
+    <blockquote class="testimonial-card" style="animation-delay:${(i * 0.12).toFixed(2)}s">
       <p>${t.quote}</p>
       <footer>
         <span class="t-name">${t.name}</span>
