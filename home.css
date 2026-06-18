@@ -15,7 +15,7 @@
   inset: 0;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.7s ease;
+  transition: opacity 1.1s ease;
   background: #100a06;
 }
 
@@ -25,7 +25,7 @@
   position: absolute;
   inset: -6%;
   background: var(--slide-img, none) center / cover no-repeat;
-  filter: blur(32px) brightness(0.28) saturate(1.3);
+  filter: blur(22px) brightness(0.45) saturate(1.2);
   z-index: 0;
 }
 
@@ -53,6 +53,16 @@
 .slider .list .item.active {
   opacity: 1;
   z-index: 10;
+}
+
+/* Ken Burns: slow zoom on the active slide's image */
+.slider .list .item.active img {
+  animation: kenBurns 7s ease-in-out forwards;
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1);    }
+  to   { transform: scale(1.07); }
 }
 
 /* Slide content — above the gradient */
