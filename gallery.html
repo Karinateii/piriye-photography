@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="base.css?v=6">
-    <link rel="stylesheet" href="gallery.css?v=6">
+    <link rel="stylesheet" href="css/base.css?v=10">
+    <link rel="stylesheet" href="css/gallery.css?v=10">
 </head>
 <body>
 
@@ -57,7 +57,7 @@
         <p>A visual journey through the lens</p>
     </section>
 
-    <!-- Gallery -->
+    <!-- Gallery — grid is built by js/cms-loader.js from content/gallery.json -->
     <section class="gallery-section">
 
         <div class="gallery-filters reveal">
@@ -70,107 +70,7 @@
         </div>
 
         <div class="gallery-grid" id="gallery-grid">
-
-            <!-- Row 1: portrait | landscape | portrait -->
-            <div class="gallery-item reveal" data-category="portrait" data-delay="0">
-                <img src="media/Piriye Shot.png" alt="Portrait Session">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Portrait</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="wedding" data-delay="0.08">
-                <img src="media/Piriye Shot.png" alt="Wedding">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Wedding</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="engagement" data-delay="0.16">
-                <img src="media/Piriye Shot.png" alt="Engagement">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Engagement</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <!-- Row 2: landscape | portrait | landscape -->
-            <div class="gallery-item reveal" data-category="event" data-delay="0">
-                <img src="media/doyin-birthday.jpg" alt="Birthday Celebration">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Events</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="content" data-delay="0.08">
-                <img src="media/Piriye Shot.png" alt="Content Creation">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Content</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="portrait" data-delay="0.16">
-                <img src="media/Piriye Shot.png" alt="Portrait">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Portrait</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <!-- Row 3: portrait | landscape | portrait -->
-            <div class="gallery-item reveal" data-category="wedding" data-delay="0">
-                <img src="media/Piriye Shot.png" alt="Wedding">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Wedding</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="portrait" data-delay="0.08">
-                <img src="media/Piriye Shot.png" alt="Portrait">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Portrait</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="engagement" data-delay="0.16">
-                <img src="media/Piriye Shot.png" alt="Engagement">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Engagement</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <!-- Row 4: landscape | portrait | landscape -->
-            <div class="gallery-item reveal" data-category="content" data-delay="0">
-                <img src="media/Piriye Shot.png" alt="Content">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Content</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="event" data-delay="0.08">
-                <img src="media/Piriye Shot.png" alt="Event">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Events</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
-            <div class="gallery-item reveal" data-category="wedding" data-delay="0.16">
-                <img src="media/Piriye Shot.png" alt="Wedding">
-                <div class="gallery-overlay">
-                    <span class="overlay-category">Wedding</span>
-                    <span class="overlay-view">View image</span>
-                </div>
-            </div>
-
+            <!-- Items injected here by cms-loader.js -->
         </div>
 
     </section>
@@ -178,12 +78,12 @@
     <!-- Footer -->
     <div class="footer-container">
         <div class="social-media">
-            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon" data-social="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon" data-social="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" class="social-icon" data-social="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon" data-social="linkedin"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>&copy; 2024 Piriye Photography. All rights reserved.</p>
+        <p>&copy; 2025 Piriye Photography. All rights reserved.</p>
     </div>
 
     <a href="#" class="back-to-top" id="back-to-top"><i class="fas fa-chevron-up"></i></a>
@@ -197,9 +97,10 @@
         <span class="lightbox-counter" id="lightbox-counter"></span>
     </div>
 
-    <script src="script.js"></script>
-    <script src="gallery.js"></script>
-    <script src="experience.js?v=2"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cms-loader.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/experience.js?v=2"></script>
     <script>
         document.getElementById('toggle-sidebar').addEventListener('click', () => {
             document.querySelector('.sidebar').style.display = 'flex';

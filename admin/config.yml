@@ -1,0 +1,122 @@
+# ─────────────────────────────────────────────────────────
+# Decap CMS config for Piriye Photography
+# Hosted on Netlify · Authentication: Netlify Identity
+# ─────────────────────────────────────────────────────────
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded photos are stored in the repo
+media_folder: "media"
+public_folder: "/media"
+
+# ── Collections ───────────────────────────────────────────
+
+collections:
+
+  # ── Gallery Photos ──────────────────────────────────────
+  # Each entry is one photo. Piriye uploads and categorises.
+  - name: "gallery"
+    label: "Gallery"
+    label_singular: "Photo"
+    description: "Add, remove or reorder gallery photos here."
+    files:
+      - name: "photos"
+        label: "Gallery Photos"
+        file: "content/gallery.json"
+        format: json
+        fields:
+          - name: "photos"
+            label: "Photos"
+            label_singular: "Photo"
+            widget: "list"
+            summary: "{{fields.caption}} — {{fields.category}}"
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                hint: "Upload the photo file"
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Portrait", value: "portrait" }
+                  - { label: "Wedding", value: "wedding" }
+                  - { label: "Engagement", value: "engagement" }
+                  - { label: "Events", value: "event" }
+                  - { label: "Content Creation", value: "content" }
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                required: false
+                hint: "Short label shown on hover"
+              - label: "Alt text"
+                name: "alt"
+                widget: "string"
+                required: false
+                hint: "Describe the image for accessibility"
+
+  # ── Testimonials ────────────────────────────────────────
+  - name: "testimonials"
+    label: "Testimonials"
+    description: "Client quotes displayed on the home page."
+    files:
+      - name: "quotes"
+        label: "Testimonials"
+        file: "content/testimonials.json"
+        format: json
+        fields:
+          - name: "testimonials"
+            label: "Testimonials"
+            label_singular: "Testimonial"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.type}}"
+            fields:
+              - { label: "Client Name", name: "name", widget: "string" }
+              - label: "Session Type"
+                name: "type"
+                widget: "string"
+                hint: "e.g. Wedding Coverage, Portrait Session"
+              - { label: "Quote", name: "quote", widget: "text" }
+
+  # ── Site Settings ────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    description: "Contact info, social media links, and package prices."
+    files:
+
+      - name: "contact"
+        label: "Contact & Social Media"
+        file: "content/settings.json"
+        format: json
+        fields:
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Location / Studio", name: "location", widget: "string" }
+          - label: "Instagram URL"
+            name: "instagram"
+            widget: "string"
+            hint: "Full URL, e.g. https://instagram.com/yourhandle"
+          - label: "Twitter / X URL"
+            name: "twitter"
+            widget: "string"
+          - label: "YouTube URL"
+            name: "youtube"
+            widget: "string"
+          - label: "LinkedIn URL"
+            name: "linkedin"
+            widget: "string"
+
+      - name: "packages"
+        label: "Package Prices"
+        file: "content/packages.json"
+        format: json
+        fields:
+          - { label: "Single Session", name: "single", widget: "string", hint: "e.g. $250" }
+          - { label: "Double Session", name: "double", widget: "string" }
+          - { label: "Engagement", name: "engagement", widget: "string" }
+          - { label: "Wedding", name: "wedding", widget: "string" }
+          - { label: "Event Photography", name: "event_photography", widget: "string" }
+          - { label: "Event Videography", name: "event_videography", widget: "string" }
+          - { label: "Content Creation", name: "content_creation", widget: "string" }

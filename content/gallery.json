@@ -1,0 +1,76 @@
+{
+  "photos": [
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "portrait",
+      "caption": "Portrait Session",
+      "alt": "Portrait Photography"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "wedding",
+      "caption": "Wedding",
+      "alt": "Wedding Photography"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "engagement",
+      "caption": "Engagement",
+      "alt": "Engagement Photography"
+    },
+    {
+      "image": "/media/doyin-birthday.jpg",
+      "category": "event",
+      "caption": "Birthday Celebration",
+      "alt": "Event Photography"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "content",
+      "caption": "Content Creation",
+      "alt": "Content Creation"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "portrait",
+      "caption": "Portrait",
+      "alt": "Portrait"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "wedding",
+      "caption": "Wedding",
+      "alt": "Wedding"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "portrait",
+      "caption": "Portrait",
+      "alt": "Portrait"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "engagement",
+      "caption": "Engagement",
+      "alt": "Engagement"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "content",
+      "caption": "Content",
+      "alt": "Content"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "event",
+      "caption": "Events",
+      "alt": "Event"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "category": "wedding",
+      "caption": "Wedding",
+      "alt": "Wedding"
+    }
+  ]
+}
