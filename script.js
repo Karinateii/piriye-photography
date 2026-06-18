@@ -50,10 +50,11 @@ if (next && prev && countItem > 0) {
 
 // Intro fade-in is now handled by experience.js via .reveal class
 
-// Set blurred background on each slide from its own image
+// Set blurred background on each slide's .slide-blur div directly
 document.querySelectorAll('.slider .list .item').forEach(item => {
   const img = item.querySelector('img');
-  if (img) {
-    item.style.setProperty('--slide-img', `url('${img.getAttribute('src')}')`);
+  const blur = item.querySelector('.slide-blur');
+  if (img && blur) {
+    blur.style.backgroundImage = `url('${img.getAttribute('src')}')`;
   }
 });

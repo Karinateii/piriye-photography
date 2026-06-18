@@ -19,13 +19,14 @@
   background: #100a06;
 }
 
-/* Blurred background — filled from JS via --slide-img custom property */
-.slider .list .item::before {
-  content: '';
+/* Blurred background — real div, backgroundImage set by script.js */
+.slide-blur {
   position: absolute;
   inset: -6%;
-  background: var(--slide-img, none) center / cover no-repeat;
-  filter: blur(22px) brightness(0.45) saturate(1.2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(24px) brightness(0.50) saturate(1.3);
   z-index: 0;
 }
 
