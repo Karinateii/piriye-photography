@@ -16,6 +16,31 @@ async function fetchJSON(file) {
   }
 }
 
+/* ── Homepage Slider ──────────────────────────────────── */
+async function loadSlider() {
+  const list = document.querySelector('.slider .list');
+  if (!list) return;
+
+  const data = await fetchJSON('slider.json');
+  if (!data?.slides?.length) return;
+
+  const BOOKING = 'https://piriyeco.hbportal.co/public/book-now/1-booknow';
+
+  list.innerHTML = data.slides.map((slide, i) => `
+    <div class="item${i === 0 ? ' active' : ''}">
+      <div class="slide-blur"></div>
+      <img src="${slide.image}" alt="${slide.alt || ''}">
+      <div class="content">
+        <span class="slide-tag">${slide.tag}</span>
+        <h2>${slide.heading}</h2>
+        <p class="slide-desc">${slide.description}</p>
+        <a href="${BOOKING}" target="_blank" class="slide-cta">${slide.cta}</a>
+      </div>
+    </div>`).join('');
+
+  if (typeof window.initSlider === 'function') window.initSlider();
+}
+
 /* ── Gallery ──────────────────────────────────────────── */
 async function loadGallery() {
   const grid = document.getElementById('gallery-grid');
@@ -117,6 +142,7 @@ async function loadPackages() {
 
 /* ── Boot ─────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
+  loadSlider();
   loadGallery();
   loadTestimonials();
   loadSettings();

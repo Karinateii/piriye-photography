@@ -1,0 +1,44 @@
+{
+  "slides": [
+    {
+      "image": "/media/Piriye Shot.png",
+      "alt": "Portrait Photography",
+      "tag": "Portrait Sessions",
+      "heading": "You",
+      "description": "Authentic expressions, timeless frames. Let your story be told through a lens that sees you.",
+      "cta": "Book a Session"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "alt": "Wedding Photography",
+      "tag": "Wedding Coverage",
+      "heading": "Love",
+      "description": "Your love story, beautifully preserved. Every glance, every tear, every laugh — forever yours.",
+      "cta": "View Packages"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "alt": "Engagement Photography",
+      "tag": "Engagement Shoots",
+      "heading": "Us",
+      "description": "Celebrate your next chapter before the big day with a shoot that captures your connection.",
+      "cta": "View Packages"
+    },
+    {
+      "image": "/media/doyin-birthday.jpg",
+      "alt": "Event Photography",
+      "tag": "Event Coverage",
+      "heading": "Live",
+      "description": "Every special moment captured and preserved. Relive the energy of your most important events.",
+      "cta": "View Packages"
+    },
+    {
+      "image": "/media/Piriye Shot.png",
+      "alt": "Content Creation",
+      "tag": "Content Creation",
+      "heading": "Create",
+      "description": "Elevate your brand with stunning visuals that stop the scroll and tell your story.",
+      "cta": "View Packages"
+    }
+  ]
+}

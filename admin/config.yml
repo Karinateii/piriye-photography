@@ -15,6 +15,50 @@ public_folder: "/media"
 
 collections:
 
+  # ── Homepage Slider ─────────────────────────────────────
+  # Each slide has a photo + matching text. Image and words must match.
+  - name: "slider"
+    label: "Homepage Slider"
+    description: "The rotating slides on the home page. Upload a photo and write the matching text for each slide."
+    files:
+      - name: "slides"
+        label: "Slides"
+        file: "content/slider.json"
+        format: json
+        fields:
+          - name: "slides"
+            label: "Slides"
+            label_singular: "Slide"
+            widget: "list"
+            min: 1
+            max: 7
+            summary: "{{fields.tag}} — {{fields.heading}}"
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                hint: "Upload the slide background photo"
+              - label: "Alt text"
+                name: "alt"
+                widget: "string"
+                required: false
+                hint: "Describe the image (for accessibility)"
+              - label: "Tag line"
+                name: "tag"
+                widget: "string"
+                hint: "Small label above the heading (e.g. Portrait Sessions)"
+              - label: "Heading"
+                name: "heading"
+                widget: "string"
+                hint: "The large single word (e.g. You, Love, Us)"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Button text"
+                name: "cta"
+                widget: "string"
+                hint: "e.g. Book a Session, View Packages"
+
   # ── Gallery Photos ──────────────────────────────────────
   # Each entry is one photo. Piriye uploads and categorises.
   - name: "gallery"

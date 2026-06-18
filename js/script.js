@@ -15,46 +15,50 @@ document.addEventListener('DOMContentLoaded', () => {
 // Navbar: transparent → dark on scroll
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  }
+  if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// Hero slider
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let countItem = items.length;
-let itemActive = 0;
+// Hero slider — called by cms-loader after slides are injected
+let _sliderInterval;
 
-if (next && prev && countItem > 0) {
-  let refreshInterval = setInterval(() => next.click(), 6000);
+window.initSlider = function () {
+  const list  = document.querySelector('.slider .list');
+  const next  = document.getElementById('next');
+  const prev  = document.getElementById('prev');
+  if (!list || !next || !prev) return;
 
-  next.onclick = () => {
-    itemActive = (itemActive + 1) % countItem;
-    showSlider();
-  };
+  const items = [...list.querySelectorAll('.item')];
+  const count = items.length;
+  if (!count) return;
 
-  prev.onclick = () => {
-    itemActive = (itemActive - 1 + countItem) % countItem;
-    showSlider();
-  };
+  let active = 0;
 
-  function showSlider() {
-    document.querySelector('.slider .list .item.active').classList.remove('active');
-    items[itemActive].classList.add('active');
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(() => next.click(), 6000);
+  // Wire blur backgrounds to each slide's image
+  items.forEach(item => {
+    const img  = item.querySelector('img');
+    const blur = item.querySelector('.slide-blur');
+    if (img && blur) blur.style.backgroundImage = `url('${img.getAttribute('src')}')`;
+  });
+
+  clearInterval(_sliderInterval);
+
+  function show(index) {
+    items[active].classList.remove('active');
+    active = ((index % count) + count) % count;
+    items[active].classList.add('active');
+    clearInterval(_sliderInterval);
+    _sliderInterval = setInterval(() => show(active + 1), 6000);
   }
-}
 
-// Intro fade-in is now handled by experience.js via .reveal class
+  next.onclick = () => show(active + 1);
+  prev.onclick = () => show(active - 1);
 
-// Set blurred background on each slide's .slide-blur div directly
-document.querySelectorAll('.slider .list .item').forEach(item => {
-  const img = item.querySelector('img');
-  const blur = item.querySelector('.slide-blur');
-  if (img && blur) {
-    blur.style.backgroundImage = `url('${img.getAttribute('src')}')`;
+  _sliderInterval = setInterval(() => show(active + 1), 6000);
+};
+
+// Auto-init if slides are already in the DOM (static / fallback)
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelectorAll('.slider .list .item').length > 0) {
+    window.initSlider();
   }
 });
