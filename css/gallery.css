@@ -270,6 +270,7 @@
 /* Responsive */
 @media (max-width: 900px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-hero { padding: calc(var(--nav-h) + 40px) 20px 44px; }
 }
 
 @media (max-width: 540px) {

@@ -193,6 +193,11 @@
   .arrows { bottom: 22px; right: 20px; }
 }
 
+@media (max-width: 420px) {
+  .slider .list .item .content h2 { font-size: 36px; }
+  .slide-desc { font-size: 0.82em; }
+}
+
 /* ── Intro Section ── */
 .intro-section {
   padding: 110px 24px 100px;
@@ -385,4 +390,8 @@
 @media (max-width: 700px) {
   #contact { padding: 72px 20px 80px; }
   .contact-info-row { grid-template-columns: 1fr; }
+  .intro-section { padding: 72px 20px; }
+  .intro-content h1 { font-size: 2.1em; }
+  .contact-header h2,
+  .testimonials-section h2 { font-size: 2em; letter-spacing: 4px; }
 }
