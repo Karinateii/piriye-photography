@@ -50,10 +50,19 @@
         </ul>
     </nav>
 
-    <!-- Hero Slider — slides injected by cms-loader.js from content/slider.json -->
+    <!-- Hero Slider — cms-loader.js replaces this with content/slider.json -->
     <div class="slider">
         <div class="list">
-            <!-- populated by cms-loader -->
+            <div class="item active">
+                <div class="slide-blur"></div>
+                <img src="media/Piriye Shot.png" alt="Piriye Photography">
+                <div class="content">
+                    <span class="slide-tag">Photography Studio</span>
+                    <h2>Piriye</h2>
+                    <p class="slide-desc">Capturing life's most meaningful moments with artistry and intention.</p>
+                    <a href="https://piriyeco.hbportal.co/public/book-now/1-booknow" target="_blank" class="slide-cta">Book a Session</a>
+                </div>
+            </div>
         </div>
         <div class="arrows">
             <button id="prev">&#8249;</button>
@@ -78,15 +87,16 @@
     <section class="testimonials-section">
         <span class="section-label">Kind Words</span>
         <h2>From the Heart</h2>
+        <!-- cms-loader.js replaces these with content/testimonials.json -->
         <div class="testimonials-grid">
-            <blockquote class="testimonial-card reveal" data-delay="0">
+            <blockquote class="testimonial-card">
                 <p>Piriye captured our wedding day so beautifully — every photo feels like a painting. We relive the magic every time we look through our album.</p>
                 <footer>
                     <span class="t-name">Adaeze &amp; Emeka</span>
                     <span class="t-type">Wedding Coverage</span>
                 </footer>
             </blockquote>
-            <blockquote class="testimonial-card reveal" data-delay="0.12">
+            <blockquote class="testimonial-card">
                 <p>I was so nervous for my portrait session but Piriye made everything so easy and natural. The final images completely blew me away.</p>
                 <footer>
                     <span class="t-name">Chinwe O.</span>
@@ -142,8 +152,8 @@
     <a href="#" class="back-to-top" id="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/cms-loader.js"></script>
+    <script src="js/script.js?v=3"></script>
+    <script src="js/cms-loader.js?v=3"></script>
     <script src="js/experience.js?v=2"></script>
 </body>
 </html>
