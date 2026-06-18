@@ -81,26 +81,21 @@
   color: white;
 }
 
-/* ── Masonry-feel grid ── */
+/* ── Grid ── */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  align-items: start;
 }
 
-/* Default aspect ratio */
 .gallery-item {
   position: relative;
   overflow: hidden;
   cursor: pointer;
   background: var(--bg-surface);
-  aspect-ratio: 2/3;
+  aspect-ratio: 3/4;
   transition: opacity 0.32s ease, transform 0.32s ease;
 }
-
-.gallery-item[data-size="landscape"] { aspect-ratio: 3/2; }
-.gallery-item[data-size="square"]    { aspect-ratio: 1;   }
 
 .gallery-item img {
   width: 100%;
